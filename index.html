@@ -243,19 +243,19 @@
 <script>
 
 	function view1(){
-		document.getElementById("Slide_1").setAttribute("style","visibility: visible");
-		document.getElementById("Slide_2").setAttribute("style","visibility: hidden");
-		document.getElementById("Slide_3").setAttribute("style","visibility: hidden");
+		document.getElementById("Slide_1").setAttribute("style","opacity:1");
+		document.getElementById("Slide_2").setAttribute("style","opacity:0");
+		document.getElementById("Slide_3").setAttribute("style","opacity:0");
 	};
 	function view2(){
-		document.getElementById("Slide_1").setAttribute("style","visibility: hidden");
-		document.getElementById("Slide_2").setAttribute("style","visibility: visible");
-		document.getElementById("Slide_3").setAttribute("style","visibility: hidden");
+		document.getElementById("Slide_1").setAttribute("style","opacity:0");
+		document.getElementById("Slide_2").setAttribute("style","opacity:1");
+		document.getElementById("Slide_3").setAttribute("style","opacity:0");
 	};
 	function view3(){
-		document.getElementById("Slide_1").setAttribute("style","visibility: hidden");
-		document.getElementById("Slide_2").setAttribute("style","visibility: hidden");
-		document.getElementById("Slide_3").setAttribute("style","visibility: visible");
+		document.getElementById("Slide_1").setAttribute("style","opacity:0");
+		document.getElementById("Slide_2").setAttribute("style","opacity:0");
+		document.getElementById("Slide_3").setAttribute("style","opacity:1");
 	};
 
 	displayPage();
@@ -276,12 +276,6 @@
 			padding: 0;
 			box-sizing: border-box;
 			border: none;
-			-webkit-touch-callout: none; /* iOS Safari */
-			-webkit-user-select: none; /* Safari */
-			-khtml-user-select: none; /* Konqueror HTML */
-			-moz-user-select: none; /* Old versions of Firefox */
-			-ms-user-select: none; /* Internet Explorer/Edge */
-			user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
 		}
 		#Nav {
 			position: absolute;
@@ -304,12 +298,7 @@
 			top: 147px;
 			overflow: visible;
 		}
-		#Polygon_1_ck {
-			fill: rgba(40,60,79,0.4);
-		}
-		#Polygon_1_ck:hover {
-			fill: rgba(40,60,79,1);
-		}
+	
 		.Polygon_1_ck {
 			overflow: visible;
 			position: absolute;
@@ -319,6 +308,14 @@
 			transform-origin: center;
 			left: 0px;
 			top: 0px;
+			fill: rgba(40,60,79,0.4);
+			transition-property: fill;
+            transition-duration: .25s;
+			transition-timing-function: linear;
+			z-index: 31;
+		}
+		.Polygon_1_ck:hover {
+			fill: rgba(40,60,79,1);
 		}
 		#Component_2__26 {
 			position: absolute;
@@ -328,12 +325,7 @@
 			top: 147px;
 			overflow: visible;
 		}
-		#Polygon_2_cm {
-			fill: rgba(40,60,79,0.4);
-		}
-		#Polygon_2_cm:hover {
-			fill: rgba(40,60,79,1);
-		}
+
 		.Polygon_2_cm {
 			overflow: visible;
 			position: absolute;
@@ -343,6 +335,14 @@
 			transform-origin: center;
 			left: 0px;
 			top: 0px;
+			fill: rgba(40,60,79,0.4);
+			transition-property: fill;
+            transition-duration: .25s;
+			transition-timing-function: linear;
+			z-index: 31;
+		}
+		.Polygon_2_cm:hover {
+			fill: rgba(40,60,79,1);
 		}
 		#Slide_1 {
 			position: absolute;
@@ -355,6 +355,9 @@
 			--web-scale-on-resize: true;
 			--web-show-navigation-controls: true;
 			--web-enable-deep-linking: true;
+			transition-property: opacity;
+			transition-duration: 1s;
+			transition-timing-function: linear;
 		}
 		#Ellipse_1 {
 			fill: rgba(40,60,79,1);
@@ -542,6 +545,9 @@
 			--web-scale-on-resize: true;
 			--web-show-navigation-controls: true;
 			--web-enable-deep-linking: true;
+			transition-property: opacity;
+			transition-duration: 1s;
+			transition-timing-function: linear;
 		}
 		#Ellipse_2 {
 			fill: rgba(40,60,79,1);
@@ -666,6 +672,9 @@
 			--web-scale-on-resize: true;
 			--web-show-navigation-controls: true;
 			--web-enable-deep-linking: true;
+			transition-property: opacity;
+			transition-duration: 1s;
+			transition-timing-function: linear;
 		}
 		#Ellipse_3 {
 			fill: rgba(40,60,79,1);
